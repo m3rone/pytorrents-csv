@@ -27,8 +27,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://codeberg.org/m3r/pytorrent-csv"
-"Bug Tracker" = "https://codeberg.org/m3r/pytorrent-csv/issues"
+"Homepage" = "https://codeberg.org/m3r/pytorrents-csv"
+"Bug Tracker" = "https://codeberg.org/m3r/pytorrents-csv/issues"
 
 [project.scripts]
 pytorrents-csv = "pytorrents_csv.pytorrents_csv:main"
