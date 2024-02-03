@@ -15,7 +15,7 @@ def main():
 
     assert len(args.query) > 3, "\n----\nYour query is too short! It has to be 3 or more characters.\n----"
 
-    returnedjson = requests.get(f"https://torrents-csv.ml/service/search?q={args.query}&size={args.number}&page={args.page}")
+    returnedjson = requests.get(f"https://torrents-csv.com/service/search?q={args.query}&size={args.number}&page={args.page}")
 
     listjson = returnedjson.json()
     listjson.reverse()
