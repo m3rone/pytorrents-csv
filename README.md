@@ -1,6 +1,6 @@
 # pytorrents-csv
 
-a python client for https://torrents-csv.ml/
+a python client for https://torrents-csv.com/
 
 Installation: `pip install pytorrents-csv`
 
@@ -44,4 +44,4 @@ Page: 1
 ### Disclaimer
 I am not encouraging piracy and I am not responsible for any legal troubles you may get yourself in. Only download material that is public domain or that you are allowed to download. 
 
-Not affiliated with torrents-csv.ml
+Not affiliated with torrents-csv.com

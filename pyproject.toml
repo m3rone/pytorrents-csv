@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytorrents-csv"
-version = "1.0"
+version = "2.0.0"
 authors = [
-  { name="mazer", email="DO-NOT-EMAIL@example.com" },
+  { name="mazer", email="contact@m3r.one" },
 ]
 
 description = "a python cli client for torrents-csv"

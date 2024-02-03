@@ -2,7 +2,7 @@ import argparse
 from datetime import datetime
 import requests
 
-VERSION = "1.0"
+VERSION = "2.0.0"
 
 def main():
     parser = argparse.ArgumentParser(description='a python cli client for torrents-csv', prog = "pytorrent-csv", epilog = f"Version: {str(VERSION)}")
