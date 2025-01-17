@@ -2,7 +2,7 @@ import argparse
 from datetime import datetime
 import requests
 
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 
 def main():
     parser = argparse.ArgumentParser(description='a python cli client for torrents-csv', prog = "pytorrent-csv", epilog = f"Version: {str(VERSION)}")
@@ -17,7 +17,7 @@ def main():
 
     returnedjson = requests.get(f"https://torrents-csv.com/service/search?q={args.query}&size={args.number}&page={args.page}")
 
-    listjson = returnedjson.json()
+    listjson = returnedjson.json()["torrents"]
     listjson.reverse()
     print("\n-------------------------------------")
     for element in listjson:

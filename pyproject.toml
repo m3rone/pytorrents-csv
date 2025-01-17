@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytorrents-csv"
-version = "2.0.0"
+version = "2.0.1"
 authors = [
   { name="mazer", email="contact@m3r.one" },
 ]
@@ -27,8 +27,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://codeberg.org/m3r/pytorrents-csv"
-"Bug Tracker" = "https://codeberg.org/m3r/pytorrents-csv/issues"
+"Homepage" = "https://github.com/m3rone/pytorrents-csv"
+"Bug Tracker" = "https://github.com/m3rone/pytorrents-csv/issues"
 
 [project.scripts]
 pytorrents-csv = "pytorrents_csv.pytorrents_csv:main"
