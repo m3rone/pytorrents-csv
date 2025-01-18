@@ -1,6 +1,7 @@
 import argparse
 from datetime import datetime
 import requests
+from .responsetypes import pytorrent_from_dict
 
 VERSION = "2.0.1"
 
@@ -17,13 +18,13 @@ def main():
 
     returnedjson = requests.get(f"https://torrents-csv.com/service/search?q={args.query}&size={args.number}&page={args.page}")
 
-    listjson = returnedjson.json()["torrents"]
+    listjson = pytorrent_from_dict(returnedjson.json()).torrents
     listjson.reverse()
     print("\n-------------------------------------")
     for element in listjson:
         if element != "error":
-            print(f"Name: {element['name']}")
-            size = int(element['size_bytes'])
+            print(f"Name: {element.name}")
+            size = int(element.size_bytes)
             if 1048576 > size > 1024:
                 size = f"{str(size/1024)[:5]} KB"
             elif 1073741824 > size > 1048576:
@@ -33,9 +34,9 @@ def main():
             elif size > 1099511627776:
                 size = f"{str(size/1099511627776)[:5]} TB"
             print(f"Size: {str(size)}")
-            print(f"Created: {datetime.utcfromtimestamp(element['created_unix']).strftime('%Y-%m-%d %H:%M:%S')}")
-            print(f"Seeders: {element['seeders']}")
-            print(f"Infohash: {element['infohash']}")
+            print(f"Created: {datetime.utcfromtimestamp(element.created_unix).strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"Seeders: {element.seeders}")
+            print(f"Infohash: {element.infohash}")
             print("-------------------------------------")
         else:
             print(f"An error has occured: {listjson}")
