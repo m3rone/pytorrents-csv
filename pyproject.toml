@@ -19,9 +19,9 @@ classifiers = [
 ]
 
 dependencies = [
- "certifi==2024.7.4",
- "charset-normalizer==3.1.0",
- "idna==3.7",
+ "certifi==2026.4.22",
+ "charset-normalizer==3.4.7",
+ "idna==3.13",
  "requests==2.33.1",
  "urllib3==2.7.0",
 ]
